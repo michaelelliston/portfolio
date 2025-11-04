@@ -1,5 +1,6 @@
 package com.pluralsight.finance;
 
+import com.pluralsight.FixedAsset;
 import com.pluralsight.Valuable;
 
 public class FinanceApplication {
@@ -10,5 +11,13 @@ public class FinanceApplication {
 
         account1.deposit(100);
 //        account2.deposit(100);   Does not work, unless you verify account2 is an instance of BankAccount.
+
+        if (account2 instanceof BankAccount) {
+            ((BankAccount) account2).deposit(100);
+        }
+
+        assert (account2 instanceof BankAccount);
+
+        ((BankAccount) account2).withdraw(100);
     }
 }
