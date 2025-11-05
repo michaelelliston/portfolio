@@ -15,15 +15,20 @@ public class CreditCard implements Valuable {
     }
 
     public void charge(double amount) {
-        this.balance -= amount;
+        this.balance += amount;
     }
 
     public void pay(double amount) {
-        this.balance += amount;
+        this.balance -= amount;
     }
 
     @Override
     public double getValue() {
-        return balance;
+        return balance * -1;
+    }
+
+    @Override
+    public int compareTo(Valuable o) {
+        return 0;
     }
 }

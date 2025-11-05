@@ -12,4 +12,6 @@ public abstract class FixedAsset implements Valuable {
 
     @Override
     public abstract double getValue();
+
+
 }

@@ -26,4 +26,9 @@ public class BankAccount implements Valuable {
     public double getValue() {
         return this.balance;
     }
+
+    @Override
+    public int compareTo(Valuable o) {
+        return 0;
+    }
 }
