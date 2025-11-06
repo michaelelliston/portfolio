@@ -2,13 +2,14 @@ package com.pluralsight.finance;
 
 import com.pluralsight.Valuable;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Portfolio {
     private String name;
     private String owner;
-    private List<Valuable> assets;
+    private List<Valuable> assets = new ArrayList<Valuable>();
 
     public Portfolio(String name, String owner) {
         this.name = name;
@@ -31,14 +32,14 @@ public class Portfolio {
 
         Collections.sort(assets);
 
-        return assets.get(0);
+        return assets.get(assets.size() - 1);
     }
 
     public Valuable getLeastValuable() {
 
         Collections.sort(assets);
 
-        return assets.get(assets.size() - 1);
+        return assets.get(0);
     }
 
 }
